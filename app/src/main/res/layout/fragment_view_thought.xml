@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/thought_note_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pratheek.thoughts.ViewThought">
+
+    <TextView
+        android:id="@+id/close_thought"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+
+        android:background="@drawable/ic_baseline_close_24" />
+
+    <TextView
+        android:id="@+id/background_color_theme"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@id/take_screen_shot"
+        android:background="@drawable/ic_baseline_color_lens_24" />
+
+    <TextView
+        android:id="@+id/take_screen_shot"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/ic_baseline_crop_landscape_24" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/thought_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="100dp"
+        android:elevation="30dp"
+        app:cardCornerRadius="40dp">
+
+        <TextView
+            android:id="@+id/thought_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:hint="Your Thoughts"
+            android:lineSpacingExtra="8sp"
+            android:maxLength="400"
+            android:maxLines="20"
+            android:padding="2dp"
+            android:textSize="22sp" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.pratheek.thoughts.Dashboard">
+
+
+    <TextView
+        android:id="@+id/take_screen_shot"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/colorOrange"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:text="Your Thoughts"
+        android:textColor="@color/colorYellow"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/add_thought"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/ic_baseline_add_24" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/thought_cards"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/take_screen_shot"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/thought_card" />
+
+</RelativeLayout>
+
